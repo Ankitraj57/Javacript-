@@ -1,0 +1,61 @@
+nav{
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    border: 3px solid burlywood;
+    border-radius: 2px;
+    margin-left: 5px;
+    color: black;
+    text-decoration: none;
+    padding: 2px 3px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.canvas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button{
+     padding: 25px 35px;
+    border: 2px solid black;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    cursor: pointer;
+}
+
+h2{
+    margin-top: 5rem;
+}
+
+#grey{
+    background-color: gray;
+}
+#white{
+    background-color: white;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+#purple{
+    background-color: purple;
+}
