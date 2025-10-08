@@ -1,0 +1,140 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation bar */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Container for the form */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 350px;
+}
+
+/* Heading */
+.container h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form styling */
+form p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #74ebd5;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 12px 25px;
+    background-color: #74ebd5;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #67d4c4;
+}
+
+/* Result section */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Weight Guide */
+#weight-Guide {
+    margin-top: 30px;
+    text-align: left;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#weight-Guide h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#weight-Guide p {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
