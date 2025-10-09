@@ -63,8 +63,19 @@ nav a:hover::after {
   width: 100%;
 }
 
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Same as body background */
+}
 
 #wrapper {
+  position: relative;
+  z-index: 1;
   margin-top: 90px;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px);
