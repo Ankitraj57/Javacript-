@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #414144; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/788200/pexels-photo-788200.jpeg" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg" alt=""></li>
+            <li><img width="200px" id="prayer" src="" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //  document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    //  }
+    
+    // attchEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented,
+    // target, toElement, srcElement, currentTarget, 
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', (e) => {
+    //   console.log("clicked inside the ul");
+      
+    // })
+
+    // document.getElementById('owl').addEventListener('click', (e) => {
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // })
+
+    // document.getElementById('google').addEventListener('click', (e) => {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('google clicked');
+    // })
+
+    document.querySelector('ul').addEventListener('click', (e) => {
+        if(e.target.tagName === 'IMG'){
+            console.log(`${e.target.id} is a ID Name where you clicked`);
+            
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        } else {
+            console.log(`${e.target.tagName} is a tagName where you clicked`)
+        }
+
+
+
+        // removeIt.parentNode.removeChild(removeIt)
+    })
+</script>
+</html>
