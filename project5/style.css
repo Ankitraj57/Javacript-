@@ -1,0 +1,97 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid #e7e7e7;
+    border-collapse: collapse;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+}
+
+
+.project {
+    background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    transition: background 0.3s ease;
+}
+
+
+.key {
+    background-color: #2a2a2a;
+    padding: 30px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.key:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+.color {
+    color: #00ffff;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
+
+nav a[aria-current="page"] {
+    color: #ff6600;
+}
+
+
+body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
