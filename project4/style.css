@@ -1,0 +1,83 @@
+/* style.css */
+
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #212121;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Navigation bar styling */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    background-color: #333;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff4081;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Buttons styling */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+#start {
+    background-color: #4caf50; /* Green */
+    color: #fff;
+}
+
+#start:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#stop {
+    background-color: #f44336; /* Red */
+    color: #fff;
+}
+
+#stop:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
