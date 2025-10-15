@@ -2,119 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Profile Viewer</title>
-  <style>
-    body {
-      background-color: #0d1117;
-      color: #c9d1d9;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .card {
-      background-color: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 16px;
-      padding: 2rem;
-      width: 340px;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-    }
-
-    img {
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-      border: 3px solid #58a6ff;
-      margin-bottom: 1rem;
-      object-fit: cover;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1rem;
-      color: #8b949e;
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-
-    h4 {
-      font-size: 0.95rem;
-      margin: 0.3rem 0;
-      color: #c9d1d9;
-    }
-
-    p {
-      font-size: 0.85rem;
-      margin-top: 1.5rem;
-      color: #58a6ff;
-      word-break: break-all;
-    }
-
-    p a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-
-    p a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
-<body>
-  <div class="card">
-    <img src="" alt="image">
-    <h1></h1>
-    <h2></h2>
-    <h4 id="followers"></h4>
-    <h4 id="following"></h4>
-    <h4 id="public"></h4>
-    <p></p>
-  </div>
-
-  <script>
+<body style="background-color: #212121; color: #ffffff;">
+    <!-- 0 UNSENT Client has been created, open() not called yet.
+    1 OPEND open() has been called.
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    3 LOADING Downloading; responseText holds partial data.
+    4 DONE The operation is complete. -->
+    <div >
+        <img src="" alt="image" style="height: 45vh; width: 40vh;">
+        <h1></h1>
+        <h2></h2>
+        <h4 id="followers"></h4>
+        <h4 id="following"></h4>
+        <h4 id="public"></h4>
+        <p></p>
+    </div>
+</body>
+<script>
     const img = document.querySelector('img');
     const h1 = document.querySelector("h1");
     const h2 = document.querySelector("h2");
-    const followers = document.querySelector('#followers');
+    const followers  = document.querySelector('#followers');
     const following = document.querySelector('#following');
     const repos = document.getElementById("public");
     const url = document.querySelector("p");
-    const requestUrl = 'https://api.github.com/users/Ankitraj57';
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl);
+    const requestUrl = 'https://api.github.com/users/Ankitraj57'
+    const xhr =  new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        const data = JSON.parse(this.responseText);
-        img.src = data.avatar_url;
-        h1.innerHTML = `${data.name}`;
-        h2.innerHTML = `${data.bio || "No bio available"}`;
-        followers.innerHTML = `👥 Followers: ${data.followers}`;
-        following.innerHTML = `🔄 Following: ${data.following}`;
-        repos.innerHTML = `📦 Public Repos: ${data.public_repos}`;
-        url.innerHTML = `<a href="${data.html_url}" target="_blank">🔗 Visit GitHub Profile</a>`;
-      }
+        // console.log(xhr.readyState);
+        if (xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            // console.log(typeof data);
+            // console.log(data.followers);
+            img.src = data.avatar_url
+            h1.innerHTML = `Name : ${data.name}`
+            h2.innerHTML = `Bio : ${data.bio}`
+            followers.innerHTML =  `Followers : ${data.followers}`
+            following.innerHTML = `Following : ${data.following}`
+            repos.innerHTML = `Public-repos : ${data.public_repos}`
+            url.innerHTML = `URL : ${data.url}`
+        }
     }
     xhr.send();
-  </script>
-</body>
-
+</script>
 </html>
